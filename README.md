@@ -2,11 +2,25 @@ Minimalist React-Redux boilerplate with example of mapping props and dispatch ac
 
 ## Structure
 
-Actions // Redux
-Assets // css and media
-Components // Non Redux subscribed components
-Containers // Redux subscribed components
-Reducers // Redux
+### Actions
+
+Redux
+
+### Assets
+
+Css and media
+
+### Components
+
+Non Redux subscribed components
+
+### Containers
+
+Redux subscribed components
+
+### Reducers
+
+Redux
 
 ## Available Scripts
 
