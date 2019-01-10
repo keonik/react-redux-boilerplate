@@ -1,7 +1,7 @@
 {
-  "name": "blog",
-  "version": "0.1.0",
-  "private": true,
+  "name": "react-redux-boilerplate",
+  "version": "1.0.0",
+  "private": false,
   "dependencies": {
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
