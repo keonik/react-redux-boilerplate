@@ -1,4 +1,4 @@
-Minimalist React-Redux boilerplate with example of mapping props and dispatch actions. If you have any questions or want more of an explanation ask away.
+# Minimalist React-Redux boilerplate with example of mapping props and dispatch actions. If you have any questions or want more of an explanation ask away.
 
 ## Structure
 
