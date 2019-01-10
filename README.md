@@ -3,7 +3,7 @@
 Node 11.6.0
 npm 6.5.0
 
-If you have any questions or want more of an explanation ask away.
+If you have any questions or want more of an explanation ask away. It's meant to be minimalist and simple.
 
 ## Structure
 
