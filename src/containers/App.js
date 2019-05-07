@@ -1,68 +1,49 @@
-import React, { Component } from "react"
+import React, { Component, useState } from "react"
 import { connect } from "react-redux"
 import logo from "../assets/images/logo.svg"
 import "../assets/css/App.css"
 import { bindActionCreators } from "redux"
-import { changePage, changeStep } from "../actions/App"
+import { addItem } from "../actions/TodoList"
 
-class App extends Component {
-  constructor(props) {
-    super(props)
-    this.onStepChange = this.onStepChange.bind(this)
-    this.onPageChange = this.onPageChange.bind(this)
-  }
-
-  onPageChange(e) {
-    this.props.changePage(e.target.value)
-  }
-
-  onStepChange(e) {
-    this.props.changeStep(e.target.value)
-  }
-
-  render() {
-    let { page, step } = this.props
-    console.log({ page, step })
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p />
-          <div>
-            <p>Page: {page}</p>
-            <textarea onChange={this.onPageChange} />
-          </div>
-          <p>Step: {step}</p>
-          <textarea onChange={this.onStepChange} />
-
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    )
-  }
+const App = ({ listItems, addItem }) => {
+  const [itemText, setItemText] = useState("")
+  return (
+    <div className="App">
+      <header className="App-header">
+        <div className="form-container">
+          <p>
+            Name:
+            <input
+              style={{ minWidth: "200px", margin: 10, padding: 0 }}
+              type="text"
+              value={itemText}
+              onChange={e => setItemText(e.target.value)}
+            />
+          </p>
+          <button onClick={() => addItem(itemText)}>Add</button>
+        </div>
+        <div className="list-container">
+          {listItems &&
+            listItems.map((item, index) => <p key={index}>{item}</p>)}
+        </div>
+      </header>
+    </div>
+  )
 }
 
 const mapDispatchToProps = dispatch => {
   return bindActionCreators(
     {
-      changePage,
-      changeStep
+      addItem
     },
     dispatch
   )
 }
 
 const mapStateToProps = state => {
+  console.log("The store now contains:", state)
   return {
-    page: state.App.page,
-    step: state.App.step
+    listItems: state.TodoList.listItems
   }
 }
 

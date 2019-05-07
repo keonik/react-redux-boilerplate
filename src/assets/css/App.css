@@ -18,6 +18,13 @@
   color: white;
 }
 
+.form-container {
+  padding: 20px;
+  background-color: #1a1d22;
+  display: flex;
+  align-items: center;
+}
+
 .App-link {
   color: #61dafb;
 }
