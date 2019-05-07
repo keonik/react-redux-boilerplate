@@ -18,17 +18,13 @@ const App = props => {
   return (
     <div className="App">
       <header className="App-header">
-        <h3>The Best Todo List Every Created, Ever</h3>
+        <h3 id="header-text">Add Items</h3>
         <div className="form-container">
-          <p>
-            Item name:
-            <input
-              style={{ minWidth: "200px", margin: 10, padding: 0 }}
-              type="text"
-              value={itemText}
-              onChange={e => setItemText(e.target.value)}
-            />
-          </p>
+          <input
+            type="text"
+            value={itemText}
+            onChange={e => setItemText(e.target.value)}
+          />
           <button
             onClick={() =>
               itemText ? Add() : alert("Please enter a value for name.")
