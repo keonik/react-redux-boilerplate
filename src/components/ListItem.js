@@ -11,11 +11,16 @@ const ListItem = props => {
     editItem({ name: editText, index: index })
   }
 
+  function showEditMode() {
+    setEditText(name)
+    setEditMode(true)
+  }
+
   return !editMode ? (
     <div className="list-item">
       <p className="list-item-name">{name}</p>
       <div className="list-item-actions">
-        <button onClick={() => setEditMode(true)}>Edit</button>
+        <button onClick={() => showEditMode()}>Edit</button>
         <button onClick={() => deleteItem(index)}>Delete</button>
       </div>
     </div>
