@@ -18,20 +18,22 @@ const App = props => {
   return (
     <div className="App">
       <header className="App-header">
-        <h3 id="header-text">Add Items</h3>
         <div className="form-container">
-          <input
-            type="text"
-            value={itemText}
-            onChange={e => setItemText(e.target.value)}
-          />
-          <button
-            onClick={() =>
-              itemText ? Add() : alert("Please enter a value for name.")
-            }
-          >
-            Add
-          </button>
+          <h3 id="header-text">Add Items</h3>
+          <div className="input-container">
+            <input
+              type="text"
+              value={itemText}
+              onChange={e => setItemText(e.target.value)}
+            />
+            <button
+              onClick={() =>
+                itemText ? Add() : alert("Please enter a value for name.")
+              }
+            >
+              Add
+            </button>
+          </div>
         </div>
 
         <div className="list-container">
