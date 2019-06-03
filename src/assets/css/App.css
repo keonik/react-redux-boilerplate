@@ -18,8 +18,79 @@
   color: white;
 }
 
+#header-text {
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  margin: 20px;
+}
+
+.form-container {
+  padding: 20px;
+  width: 33.333%;
+  background-color: #1a1d22;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+
+.input-container {
+  display: flex;
+  width: 100%;
+}
+
+.list-container {
+  margin: 40px;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 20px;
+  flex-direction: column;
+  width: 33.333%;
+  flex-grow: 1;
+  height: 100px;
+  background-color: #1a1d22;
+  display: flex;
+  align-items: center;
+  overflow: auto;
+}
+
+.list-item {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 3px solid #282c34;
+  margin: 20px;
+}
+
+.list-item-name {
+  display: flex;
+  flex: 1;
+}
+
+.list-item-actions {
+  display: flex;
+}
+
 .App-link {
   color: #61dafb;
+}
+
+p {
+  font-size: 15px;
+}
+
+button {
+  margin: 10px;
+  width: 75px;
+}
+
+input {
+  margin: 10px;
+  display: flex;
+  flex: 1;
 }
 
 @keyframes App-logo-spin {
