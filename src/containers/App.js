@@ -1,18 +1,17 @@
-import React, { Component, useState } from "react"
-import { connect } from "react-redux"
-import logo from "../assets/images/logo.svg"
-import "../assets/css/App.css"
-import ListItem from "../components/ListItem"
-import { bindActionCreators } from "redux"
-import { addItem, deleteItem, editItem } from "../actions/TodoList"
+import React, { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import '../assets/css/App.css'
+import ListItem from '../components/ListItem'
+import { addItem, deleteItem, editItem } from '../actions/TodoList'
 
-const App = props => {
-  const { listItems, addItem, deleteItem, editItem } = props
-  const [itemText, setItemText] = useState("")
+const App = () => {
+  const dispatch = useDispatch()
+  const listItems = useSelector(state => state.TodoList.listItems)
+  const [itemText, setItemText] = useState('')
 
   function Add() {
-    setItemText("")
-    addItem(itemText)
+    setItemText('')
+    dispatch(addItem(itemText))
   }
 
   return (
@@ -28,7 +27,7 @@ const App = props => {
             />
             <button
               onClick={() =>
-                itemText ? Add() : alert("Please enter a value for name.")
+                itemText ? Add() : alert('Please enter a value for name.')
               }
             >
               Add
@@ -43,8 +42,8 @@ const App = props => {
                 key={index}
                 name={item}
                 index={index}
-                deleteItem={deleteItem}
-                editItem={editItem}
+                deleteItem={item => dispatch(deleteItem(item))}
+                editItem={item => dispatch(editItem(item))}
               />
             ))}
         </div>
@@ -53,24 +52,4 @@ const App = props => {
   )
 }
 
-const mapDispatchToProps = dispatch => {
-  return bindActionCreators(
-    {
-      addItem,
-      deleteItem,
-      editItem
-    },
-    dispatch
-  )
-}
-
-const mapStateToProps = state => {
-  return {
-    listItems: state.TodoList.listItems
-  }
-}
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(App)
+export default App
