@@ -3,7 +3,7 @@
 Node 11.12.0
 npm 6.9.0
 
-This is a starter or learning repository for using the new react-redux 7.0.1 hooks that replace the need for using props to pass dispatch and global state variables. There are three dispatch actions (add, edit, delete) for the list items and one tracked state varaible
+This is a starter or learning repository for using the new react-redux 7.0.1 hooks that replace the need for using props to pass dispatch and global state variables. There are three dispatch actions (`add`, `edit`, `delete` example `dispatch(add('Example'))`) for the list items and one tracked state varaible
 `(state => state.TodoList.listItems)`
 
 ## Structure
