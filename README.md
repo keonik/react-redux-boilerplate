@@ -1,9 +1,10 @@
-# Minimalist React-Redux boilerplate with example of mapping props and dispatch actions
+# Minimalist React-Redux boilerplate using react-redux hooks v7.0.1
 
-Node 11.6.0
-npm 6.5.0
+Node 11.12.0
+npm 6.9.0
 
-If you have any questions or want more of an explanation ask away. It's meant to be minimalist and simple.
+This is a starter or learning repository for using the new react-redux 7.0.1 hooks that replace the need for using props to pass dispatch and global state variables. There are three dispatch actions (add, edit, delete) for the list items and one tracked state varaible
+`(state => state.TodoList.listItems)`
 
 ## Structure
 
