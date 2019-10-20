@@ -4,7 +4,7 @@
   "private": false,
   "dependencies": {
     "react": "^16.10.2",
-    "react-dom": "^16.7.0",
+    "react-dom": "^16.10.2",
     "react-redux": "^7.0.1",
     "react-scripts": "^3.0.1",
     "redux": "^4.0.1"
